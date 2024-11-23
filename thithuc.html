@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSITE DU LỊCH</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/thithuc.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="app">
+        <header class="header-nav">
+            <div class="grid">
+                <div class="header__menu_head">
+                    <div class="large secondary menu header-bar">
+                        <!-- bên trái menu-->
+                        <div class="left logo-brand ">
+                            <div class="logo ">
+                                Travel
+                            </div>
+
+                        </div>
+                        <!--search-->
+                        <div class="header_search search-box ">
+                            <input type="text" id="searchInput" placeholder="Tìm kiếm">
+                            <button class="header_search-btn" id="searchButton">
+                                <i class="header_search-btn-icon fas fa-search"></i>
+                            </button>
+                        </div>
+                        <!--AVT khi login rồi-->
+                        <!-- <div class="header_user">
+                            <img src="hinh/10.png" alt="" class="header_user__avt">
+                            <span class="header_user_name">Anh Anh</span>
+                           
+                            <ul class="header_user-menu">
+                                <li class="header_user-item">
+                                    <a href="">Trang cá nhân</a>
+                                </li>
+                                <li class="header_user-item">
+                                    <a href="">Đăng xuất</a>
+                                </li>
+
+                            </ul>
+                        </div> -->
+                        <!--bên phải menu-->
+                        <div class="right menu desktop user-infomation">
+                            <div class="item item_sign-up ">
+                                <a href="#">Đăng ký</a>
+                            </div>
+                            <div class="item">
+                                <button class="ui primary button" id="button-login">
+                                    Đăng nhập
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+        </header>
+        <!--Menu 2-->
+        <header class="header-nav--two" id="menu">
+            <div class="grid">
+                <nav class="header-navbar">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item">
+                            <a href="index.html" class="nav_item_link">
+                                Trang chủ
+                            </a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="#" class="nav_item_link">Kế hoạch chuyến đi
+
+                            </a>
+
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="thongtincanbiet.html" class="nav_item_link">Thông tin cần biết
+
+                            </a>
+                            <!-- menu con sổ xuống cấp 1 -->
+                            <ul>
+                                <li class="submenu"><a href="thithuc.html">Thị thực</a></li>
+                                <li class="submenu"><a href="dichuyen.html">Di chuyển</a> </li>
+                                <li class="submenu"><a href="antoan.html">An toàn</a> </li>
+                                <li class="submenu"><a href="tramthongtin.html">Trạm thông tin</a> </li>
+                            </ul>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="#" class="nav_item_link">Lễ hội & sự kiện
+
+                            </a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="" class="nav_item_link">Tin tức</a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="" class="nav_item_link">Liên Hệ</a>
+                        </li>
+                    </ul>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            document.getElementById('searchButton').addEventListener('click', function () {
+                                var searchTerm = document.getElementById('searchInput').value.trim();
+                                if (searchTerm) {
+                                    window.location.href = "search_results_page.jsp?query=" + encodeURIComponent(searchTerm);
+                                } else {
+                                    alert("Vui lòng nhập từ khóa tìm kiếm!"); // Thông báo nếu ô tìm kiếm trống
+                                }
+                            });
+                        });
+                    </script>
+                    <script>
+                        window.onscroll = function () { myFunction() };
+                        var header = document.getElementById("menu");
+                        var sticky = header.offsetTop;
+                        function myFunction() {
+                            if (window.pageYOffset > sticky) {
+                                header.classList.add("sticky"); // Thêm lớp sticky nếu cuộn qua vị trí
+                            } else {
+                                header.classList.remove("sticky"); // Bỏ lớp sticky nếu không còn cuộn qua
+                            }
+                        }
+
+                    </script>
+                </nav>
+            </div>
+
+        </header>
+        <header class="image-head">
+            <div class="header-nav-img">
+                <img src="hinh/VN.png">
+            </div>
+        </header>
+
+
+
+    </div>
+    <!-- <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body"> -->
+    <!--form res-->
+    <!-- <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng ký</h3>
+                        <span class="auth-form__switch-btn">
+                            Đăng nhập
+                        </span>
+                    </div>
+
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Tên</label>
+                            <input type="text" class="auth-form__input" placeholder="Nhập tên của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Email</label>
+                            <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Mật khẩu</label>
+                            <input type="password" class="auth-form__input" placeholder="Mật khẩu tối thiểu 8 ký tự">
+                        </div>
+                    </div>
+
+
+                    <div class="auth-form__controls">
+                        <button class="btn btn--normal auth-form__controls-back ">
+                            TRỞ LẠI
+                        </button>
+                        <button class="btn btn--primary ">
+                            ĐĂNG KÝ
+                        </button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-facebook"></i>
+                        <span class="auth-form__socials--label">
+                            Kết nối với Facebook
+                        </span>
+                    </a>
+                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-google"></i>
+
+                        <span class="auth-form__socials--label"> Kết nối với Google
+                        </span>
+                    </a>
+                </div>
+
+            </div> -->
+
+    <!--form login-->
+    <!-- <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng nhập</h3>
+                        <span class="auth-form__switch-btn">
+                            Đăng ký
+                        </span>
+                    </div>
+
+                    <div class="auth-form__form">
+
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Email</label>
+                            <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Mật khẩu</label>
+                            <input type="password" class="auth-form__input" placeholder="Mật khẩu tối thiểu 8 ký tự">
+                        </div>
+                    </div>
+                    <div class="auth-form__aside">
+                        <div class="auth-form__help">
+                            <a href="" class="auth-form_help-link">Quên mật khẩu</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn btn--normal auth-form__controls-back ">
+                            TRỞ LẠI
+                        </button>
+                        <button class="btn btn--primary ">
+                            ĐĂNG NHẬP
+                        </button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-facebook"></i>
+                        <span class="auth-form__socials--label">
+                           Đăng nhập với Facebook
+                        </span>
+                    </a>
+                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-google"></i>
+
+                        <span class="auth-form__socials--label"> Đăng nhập với Google
+                        </span>
+                    </a>
+                </div>
+
+            </div> -->
+
+    </header>
+
+    <div class="app_container">
+        <div class="grid">
+            <div class="grid__row">
+
+                <div class="grid_column-1-5"></div>
+                <div class="grid_column-9">
+                    <!--introduce-->
+                    <div class="container_content">
+                        <div class="information-content">
+                            <a href="index.html"> Trang chủ </a>><a href="thongtincanbiet.html"> Thông tin cần biết
+                            </a>> Thị thực
+                            <h2 class="section-heading-container">THỊ THỰC </h2>
+                        </div>
+
+
+
+
+                        <span class="container_content-1">
+                            <h4 class="container_content-h4"> Chính sách về thị thực</h4>
+                            <p>
+                                Ngày 15/3/2022, Chính phủ ban hành Nghị quyết số 32/NQ-CP về việc miễn thị thực cho công
+                                dân
+                                các nước. Cụ thể, Việt Nam hiện đã mở lại thủ tục cấp e-visa, công dân từ 80 quốc gia có
+                                thể
+                                đăng ký và xin cấp thị thực du lịch 30 ngày. Cùng với đó, Việt Nam cũng khôi phục chính
+                                sách
+                                miễn thị thực cho công dân các nước: Đức, Pháp, I-ta-li-a, Tây Ban Nha, Vương quốc Anh,
+                                Nga,
+                                Nhật Bản, Hàn Quốc, Đan Mạch, Thụy Điển, Na-uy, Phần Lan và Belarus; khôi phục các chính
+                                sách xuất nhập cảnh và các quy định liên quan như trước khi có dịch Covid-19.
+                            </p>
+
+                        </span>
+                        <hr class="bottom-cotainer">
+                        <span class="container_content-2">
+                            <h4 class="container_content-h4"> Yêu cầu đối với khách du lịch quốc tế đến Việt Nam</h4>
+                            <p>
+                                a) Đối với khách nhập cảnh qua đường hàng không: Phải có kết quả xét nghiệm âm tính với
+                                SARS-CoV-2 (trừ trẻ em dưới 2 tuổi) trước khi xuất cảnh trong vòng 72 giờ nếu sử dụng
+                                phương
+                                pháp RT-PCR/RT-LAMP hoặc trong vòng 24 giờ nếu sử dụng phương pháp xét nghiệm nhanh và
+                                được
+                                cơ quan có thẩm quyền của nước thực hiện xét nghiệm cấp chứng nhận.
+                                <br>
+                                b) Đối với khách nhập cảnh qua đường bộ, đường sắt, đường biển: Phải có xét nghiệm như
+                                đối
+                                với yêu cầu tại điểm a. Trường hợp chưa có kết quả xét nghiệm SARS-CoV-2 tại cửa khẩu
+                                trước
+                                khi nhập cảnh (bằng phương pháp RT-PCR/RT-LAMP hoặc xét nghiệm nhanh). Nếu kết quả xét
+                                nghiệm âm tính thì được phép nhập cảnh và tham gia hoạt động du lịch, nếu kết quả xét
+                                nghiệm
+                                dương tính thì thực hiện theo hướng dẫn của cơ quan y tế.
+                                <br>
+                                c) Trẻ dưới 2 tuổi không bắt buộc phải xét nghiệm SARS-CoV-2, chưa được tiêm vắc xin
+                                phòng
+                                COVID-19 hoặc chưa từng nhiễm SARS-CoV-2 đều được nhập cảnh, tham gia các hoạt động ở
+                                ngoài
+                                nơi lưu trú cùng bố, mẹ, người thân.
+                                <br>
+                                d) Khách du lịch phải khai báo y tế trước khi nhập cảnh và sử dụng Ứng dụng khai báo y
+                                tế
+                                (PC-COVID), thực hiện các biện pháp phòng, chống dịch theo quy định trong thời gian lưu
+                                trú
+                                tại Việt Nam.
+                                <br>
+                                e) Tại cửa khẩu, nếu khách du lịch có triệu chứng nhiễm SARS-CoV-2 thì báo ngay cho cơ
+                                quan
+                                y tế tại cửa khẩu.
+                                <br>
+                                f) Khách du lịch phải có bảo hiểm y tế hoặc bảo hiểm du lịch có nội dung chi trả điều
+                                trị
+                                COVID-19 với mức trách nhiệm tối thiểu 10.000 USD.
+                                <br>
+                                g) Trong thời gian 10 ngày kể từ ngày nhập cảnh, khách du lịch tự theo dõi sức khỏe, nếu
+                                có
+                                các triệu chứng nghi nhiễm SARS-CoV-2 thì phải thông báo ngay cho cơ sở y tế nơi gần
+                                nhất để
+                                được hướng dẫn, quản lý kịp thời; thực hiện các biện pháp phòng bệnh.
+                                <br>
+                                h) Khách du lịch đảm bảo các điều kiện về xuất cảnh, nhập cảnh theo quy định pháp luật
+                                xuất
+                                nhập cảnh của Việt Nam và các quy định liên quan khác.
+                            </p>
+
+                        </span>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-1">
+        <div class="grid">
+            <div class="grid__row">
+
+                <div class="grid_column-2-5">
+                    <div class="footer-security">
+                        <img src="hinh/Travel.png" class="logo-travel">
+                        <div class="footer_secutiry--travel">
+                            <span class="footer_secutiry--travel-text">
+                                Travel - Trang website du lịch <br>
+                                © Bản quyền thuộc về Travel.
+
+                            </span>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_column-1"></div>
+                <div class="grid_column-5-1">
+                    <div class="footer-button">
+                        <div class="footer-text">
+                            <h4 class="footer-h4-signup"> ĐĂNG KÝ NHẬN TIN </h2>
+                                <span class="footer-heading">
+                                    Nhận những câu chuyện du lịch mới đến hộp thư của bạn.
+                                </span>
+                        </div>
+
+                        <div class="footer-button-signup">
+                            <input type="text" placeholder="Nhập địa chỉ email của bạn">
+                            <button class="signup-butt">Đăng ký</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid_column-1"></div>
+                <div class="grid_column-2-5">
+                    <div class="icon-iconfooter">
+                        <h4 class="footer-h4">Liên hệ với chúng tôi</h4>
+                        <div class="social-icons">
+
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer--list">
+                <div class="grid__row">
+                    <div class="grid_column-1-5"></div>
+                    <div class="grid_column-2">
+                        <div class="footer-item--2">
+
+                            <div class="footer-item-link">
+                                <a href="#" class="footer-item-link--list">
+                                    <h4>Điều khoản & điều kiện</h4>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="grid_column-2">
+                        <div class="footer-item--2">
+
+                            <div class="footer-item-link">
+
+                                <h4>Email: contact_travel@gmail.com</h4>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="grid_column-2">
+                        <div class="footer-item--2">
+
+                            <div class="footer-item-link">
+
+                                <a href="#" class="footer-item-link--list">
+                                    <h4>Chính sách bảo mật</h4>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="grid_column-1-5"></div>
+                </div>
+            </div>
+    </footer>
+
+
+    </div>
+</body>
+
+</html>

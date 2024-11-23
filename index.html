@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSITE DU LỊCH</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/tintuc.css">
+    <link rel="stylesheet" href="CSS/formanhien.css">
+    <link rel="stylesheet" href="CSS/login.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="app">
+        <header class="header-nav">
+            <div class="grid">
+                <div class="header__menu_head">
+                    <div class="large secondary menu header-bar">
+                        <!-- bên trái menu-->
+                        <div class="left logo-brand ">
+                            <div class="logo ">
+                                Travel
+                            </div>
+
+                        </div>
+                        <!--search-->
+                        <div class="header_search search-box ">
+                            <input type="text" id="searchInput" placeholder="Tìm kiếm">
+                            <button class="header_search-btn" id="searchButton">
+                                <i class="header_search-btn-icon fas fa-search"></i>
+                            </button>
+                        </div>
+                        <!--AVT khi login rồi-->
+                        <!-- <div class="header_user">
+                            <img src="hinh/10.png" alt="" class="header_user__avt">
+                            <span class="header_user_name">Anh Anh</span>
+                           
+                            <ul class="header_user-menu">
+                                <li class="header_user-item">
+                                    <a href="">Trang cá nhân</a>
+                                </li>
+                                <li class="header_user-item">
+                                    <a href="">Đăng xuất</a>
+                                </li>
+
+                            </ul>
+                        </div> -->
+                        <!--bên phải menu-->
+                        <div class="right menu desktop user-infomation">
+                            <div class="item item_sign-up ">
+                                <a href="#">Đăng ký</a>
+                            </div>
+                            <div class="item">
+                                <button class="ui primary button" id="button-login">
+                                    Đăng nhập
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+        </header>
+        <!--Menu 2-->
+        <header class="header-nav--two" id="menu">
+            <div class="grid">
+                <nav class="header-navbar">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item">
+                            <a href="index.html" class="nav_item_link">
+                                Trang chủ
+                            </a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="#" class="nav_item_link">Kế hoạch chuyến đi
+
+                            </a>
+
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="thongtincanbiet.html" class="nav_item_link">Thông tin cần biết
+
+                            </a>
+                            <!-- menu con sổ xuống cấp 1 -->
+                            <ul>
+                                <li class="submenu"><a href="thithuc.html">Thị thực</a></li>
+                                <li class="submenu"><a href="dichuyen.html">Di chuyển</a> </li>
+                                <li class="submenu"><a href="antoan.html">An toàn</a> </li>
+                                <li class="submenu"><a href="tramthongtin.html">Trạm thông tin</a> </li>
+                            </ul>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="event.html" class="nav_item_link">Lễ hội & sự kiện
+
+                            </a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="tintuc.html" class="nav_item_link">Tin tức</a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="lienhe.html" class="nav_item_link">Liên Hệ</a>
+                        </li>
+                    </ul>
+
+                    <script>
+                        window.onscroll = function () { myFunction() };
+
+                        var header = document.getElementById("menu");
+
+                        var sticky = header.offsetTop;
+
+                        function myFunction() {
+                            if (window.pageYOffset > sticky) {
+                                header.classList.add("sticky"); // Thêm lớp sticky nếu cuộn qua vị trí
+                            } else {
+                                header.classList.remove("sticky"); // Bỏ lớp sticky nếu không còn cuộn qua
+                            }
+                        }
+
+
+                    </script>
+                    <script src="Script/index.js"></script>
+                </nav>
+            </div>
+
+        </header>
+        <header class="image-head">
+            <div class="header-nav-img">
+                <img src="hinh/index-chinh.png">
+            </div>
+        </header>
+
+
+
+
+        <div class="app_container">
+            <div class="grid">
+                <div class="grid__row">
+
+                    <div class="grid_column-1-5"></div>
+                    <div class="grid_column-9">
+                        <!--introduce-->
+                        <div class="container_content">
+                            <h2 class="section-heading">Sống trọn vẹn tại Thành Phố Hồ Chí Minh </h2>
+                            <span class="container_content-1">
+
+
+                                Chúng tôi rất vui mừng chào đón bạn đến với Thành phố Hồ Chí Minh, nơi bạn có thể
+                                chiêm
+                                ngưỡng cảnh quan tuyệt đẹp và trải nghiệm nhịp sống sôi động. Hãy cùng khám phá nền
+                                văn
+                                hóa độc đáo và phong phú của chúng tôi, cũng như gặp gỡ những con người thân thiện
+                                nơi
+                                đây. Đặc biệt, đừng bỏ lỡ cơ hội thưởng thức ẩm thực phong phú tại Thành Phố Hồ Chí
+                                Minh
+                                hoặc
+                                tham gia vào những sự kiện văn hóa, âm nhạc và thể thao đặc sắc!
+
+                            </span>
+                            <br>
+                            <span class="container_content-2" style="text-align: center;">
+                                Hãy sống trọn vẹn nhất tại Thành Phố Hồ Chí Minh!
+                            </span>
+                        </div>
+                        <!------------------Option----------------->
+                        <div class="container-all--inprise">
+                            <div class="container_inprise">
+                                <h2 class="section-heading"> Sống động từng trải nghiệm </h2>
+                            </div>
+                            <div class="container_inprise-list">
+                                <div class="grid__row">
+                                    <div class="grid_column-5">
+                                        <div class="home_option-item">
+                                            <div class="home_option-item__img-circle">
+                                                <div class="home_option-item-link">
+                                                    <i class="fas fa-th-large"></i>
+                                                    <a href="all.html" class="home_option-item-link--list">
+                                                        <h4>Tất cả</h4>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-5">
+                                        <div class="home_option-item">
+                                            <div class="home_option-item__img-circle">
+                                                <div class="home_option-item-link">
+                                                    <i class="fas fa-landmark"></i>
+                                                    <a href="#" class="home_option-item-link--list">
+                                                        <h4>Văn hóa</h4>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-5">
+                                        <div class="home_option-item">
+                                            <div class="home_option-item__img-circle">
+
+                                                <div class="home_option-item-link">
+                                                    <i class="fas fa-utensils"></i>
+                                                    <a href="#" class="home_option-item-link--list">
+                                                        <h4>Ẩm thực</h4>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-5">
+                                        <div class="home_option-item">
+                                            <div class="home_option-item__img-circle">
+
+                                                <div class="home_option-item-link">
+                                                    <i class="fas fa-shopping-basket"></i>
+                                                    <a href="#" class="home_option-item-link--list">
+                                                        <h4>Mua sắm </h4>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-5">
+                                        <div class="home_option-item">
+                                            <div class="home_option-item__img-circle">
+                                                <div class="home_option-item-link">
+                                                    <i class="fas fa-umbrella-beach"></i>
+                                                    <a href="" class="home_option-item-link--list">
+                                                        <h4>Giải trí</h4>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-5">
+                                        <div class="home_option-item">
+                                            <div class="home_option-item__img-circle">
+                                                <div class="home_option-item-link">
+                                                    <i class="fab fa-pagelines"></i>
+                                                    <a href="#" class="home_option-item-link--list">
+                                                        <h4>Thiên nhiên</h4>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-----------Place----------->
+
+                        <div class="container-all--place">
+                            <div class="container_inprise">
+                                <h2 class="section-heading">Những địa điểm phải xem</h2>
+                                <span class="container_place-text"></span>
+                                Tham gia chuyến tham quan để khám phá một số kỳ quan thiên nhiên và điểm đến văn hóa
+                                hấp
+                                dẫn
+                                nhất của đất nước ngay tại đây.
+                            </div>
+                            <div class="container_place--list">
+                                <div class="grid__row">
+                                    <div class="grid_column-4">
+                                        <div class="home_place-item">
+                                            <div class="home_place-item__img">
+                                                <div class="home_place-item-link"
+                                                    onclick="toggleForm(event, placesInfo.phoDiBoNguyenHue.content, placesInfo.phoDiBoNguyenHue.imageUrl, placesInfo.phoDiBoNguyenHue.title)">
+                                                    <img src="hinh/PDB.png" alt="Phố Đi Bộ Nguyễn Huệ">
+                                                    <h4>Phố Đi Bộ Nguyễn Huệ</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid_column-4">
+                                        <div class="home_place-item">
+                                            <div class="home_place-item__img">
+                                                <div class="home_place-item-link"
+                                                    onclick="toggleForm(event, placesInfo.cotcoThuNgu.content, placesInfo.cotcoThuNgu.imageUrl, placesInfo.cotcoThuNgu.title)">
+                                                    <img src="hinh/cotco.png" a>
+                                                    <h4>Cột Cờ Thủ Ngữ</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid_column-4">
+                                        <div class="home_place-item">
+                                            <div class="home_place-item__img">
+                                                <div class="home_place-item-link"
+                                                    onclick="toggleForm(event, placesInfo.phoDiBoBuiVien.content, placesInfo.phoDiBoBuiVien.imageUrl, placesInfo.phoDiBoBuiVien.title)">
+                                                    <img src="hinh/buivien.png" alt="Phố Đi Bộ Bùi Viện">
+                                                    <h4>Phố Đi Bộ Bùi Viện</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid_column-4">
+                                        <div class="home_place-item">
+                                            <div class="home_place-item__img">
+                                                <div class="home_place-item-link"
+                                                    onclick="toggleForm(event, placesInfo.toaNhaBitexco.content, placesInfo.toaNhaBitexco.imageUrl, placesInfo.toaNhaBitexco.title)">
+                                                    <img src="hinh/bitexco.jpg" alt="Tòa Nhà Bitexco">
+                                                    <h4>Tòa Nhà Bitexco</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid_column-4">
+                                        <div class="home_place-item">
+                                            <div class="home_place-item__img">
+                                                <div class="home_place-item-link"
+                                                    onclick="toggleForm(event, placesInfo.benBachDang.content, placesInfo.benBachDang.imageUrl, placesInfo.benBachDang.title)">
+                                                    <img src="hinh/BBD.png" alt="Bến Bạch Đằng">
+                                                    <h4>Bến Bạch Đằng</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid_column-4">
+                                        <div class="home_place-item">
+                                            <div class="home_place-item__img">
+                                                <div class="home_place-item-link"
+                                                    onclick="toggleForm(event, placesInfo.buuDien.content, placesInfo.buuDien.imageUrl, placesInfo.buuDien.title)">
+                                                    <img src="hinh/buudien.png" alt="Bưu Điện Trung Tâm Thành Phố">
+                                                    <h4>Bưu Điện Trung Tâm Thành Phố</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-----Form ẩn----->
+                        <div id="overlay" class="overlay" onclick="toggleForm(event)"></div>
+                        <div id="form-container" class="form-container" style="display: none;">
+                            <div class="form-content">
+                                <div class="form-image-container">
+                                    <img id="form-image" src="" alt="Hình ảnh" />
+                                </div>
+                                <div class="form-text-container">
+                                    <h2 id="form-title">Tiêu đề sẽ hiển thị ở đây</h2>
+                                    <p id="form-text">Nội dung sẽ hiển thị ở đây.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-------------------Event-------------->
+                        <div class="container-all--event">
+                            <div class="container_event">
+                                <h2 class="section-heading"> Sắc màu Lễ hội và Sự kiện </h2>
+                            </div>
+                            <div class="container_event-list">
+                                <div class="grid__row">
+                                    <div class="grid_column-12">
+                                        <div class="home_event-item--time-line">
+                                            <div class="time-line">
+                                                <div class="home_event-item-link">
+                                                    <a href="#" class="dot"></a>
+                                                    <div class="line"></div>
+
+                                                    <a href="#" class="dot-end"></a>
+                                                </div>
+                                                <div class="month-labels">
+                                                    <span>Tháng 9/2024</span>
+                                                    <span>Tháng 12/2024</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!------------Map--------->
+                        <div class="container-all--international">
+                            <div class="container_international">
+                                <h2 class="section-heading"> Bản đồ Thành phố </h2>
+
+                            </div>
+
+                            <div class="container_inprise-list">
+                                <div class="grid__row">
+                                    <div class="grid_column-12">
+                                        <div class="home_option-item">
+                                            <div class="home_map-item__img-circle">
+                                                <div class="home_map-item-link">
+                                                    <img src="hinh/map.png" class="map-img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!------------------------------info------------------>
+                        <div class="container-all--international">
+                            <div class="container_international">
+                                <h2 class="section-heading"> Thông tin du lịch cần biết </h2>
+
+                            </div>
+
+                            <div class="container_inprise-list">
+                                <div class="grid__row">
+                                    <div class="grid_column-6">
+                                        <div class="home_option-item">
+                                            <div class="home_option-item__img-circle">
+                                                <div class="home_option-item-link">
+                                                    <i class="fas fa-th-large"></i>
+                                                    <a href="thithuc.html" class="home_option-item-link--list">
+                                                        <h4>Thị thực</h4>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-6">
+                                        <div class="home_option-item">
+                                            <div class="home_option-item__img-circle">
+                                                <div class="home_option-item-link">
+                                                    <i class="fas fa-plane"></i>
+                                                    <a href="dichuyen.html " class="home_option-item-link--list">
+                                                        <h4>Di chuyển</h4>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-6">
+                                        <div class="home_option-item">
+                                            <div class="home_option-item__img-circle">
+
+                                                <div class="home_option-item-link">
+                                                    <i class="far fa-shield-alt"></i>
+                                                    <a href="antoan.html" class="home_option-item-link--list">
+                                                        <h4>An toàn</h4>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-6">
+                                        <div class="home_option-item">
+                                            <div class="home_option-item__img-circle">
+
+                                                <div class="home_option-item-link">
+                                                    <i class="fas fa-info"></i>
+                                                    <a href="tramthongtin.html" class="home_option-item-link--list">
+                                                        <h4>Trạm thông tin</h4>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+        <footer class="footer-1">
+            <div class="grid">
+                <div class="grid__row">
+
+                    <div class="grid_column-2-5">
+                        <div class="footer-security">
+                            <img src="hinh/Travel.png" class="logo-travel">
+                            <div class="footer_secutiry--travel">
+                                <span class="footer_secutiry--travel-text">
+                                    Travel - Trang website du lịch <br>
+                                    © Bản quyền thuộc về Travel.
+
+                                </span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_column-1"></div>
+                    <div class="grid_column-5-1">
+                        <div class="footer-button">
+                            <div class="footer-text">
+                                <h4 class="footer-h4-signup"> ĐĂNG KÝ NHẬN TIN </h2>
+                                    <span class="footer-heading">
+                                        Nhận những câu chuyện du lịch mới đến hộp thư của bạn.
+                                    </span>
+                            </div>
+
+                            <div class="footer-button-signup">
+                                <input type="text" placeholder="Nhập địa chỉ email của bạn">
+                                <button class="signup-butt">Đăng ký</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid_column-1"></div>
+                    <div class="grid_column-2-5">
+                        <div class="icon-iconfooter">
+                            <h4 class="footer-h4">Liên hệ với chúng tôi</h4>
+                            <div class="social-icons">
+
+                                <i class="fab fa-facebook"></i>
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer--list">
+                    <div class="grid__row">
+                        <div class="grid_column-1-5"></div>
+                        <div class="grid_column-2">
+                            <div class="footer-item--2">
+
+                                <div class="footer-item-link">
+                                    <a href="#" class="footer-item-link--list">
+                                        <h4>Điều khoản & điều kiện</h4>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="grid_column-2">
+                            <div class="footer-item--2">
+
+                                <div class="footer-item-link">
+
+                                    <h4>Email: contact_travel@gmail.com</h4>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="grid_column-2">
+                            <div class="footer-item--2">
+
+                                <div class="footer-item-link">
+
+                                    <a href="#" class="footer-item-link--list">
+                                        <h4>Chính sách bảo mật</h4>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="grid_column-1-5"></div>
+                    </div>
+                </div>
+        </footer>
+
+        <!--
+                 <div id="overlay" class="overlay" onclick="toggleForm(event)"></div>
+                        <div id="form-container" class="form-container" style="display: none;">
+                            <div class="form-content">
+                                <div class="form-image-container">
+                                    <img id="form-image" src="" alt="Hình ảnh" />
+                                </div>
+                                <div class="form-text-container">
+                                    <h2 id="form-title">Tiêu đề sẽ hiển thị ở đây</h2>
+                                    <p id="form-text">Nội dung sẽ hiển thị ở đây.</p>
+                                </div>
+                            </div>
+                        </div>-->
+    </div>
+    <div class="modal" style="display: flex;">
+        <div class="modal__overlay" id="overlay_login"></div>
+        <div class="modal__body">
+            <div id="AuthContainer">
+                <form id="registerForm">
+                    <div class="auth-form">
+                        <div class="auth-form__container">
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__heading">Đăng ký</h3>
+                                <span class="auth-form__switch-btn" id="switchToLogin">Đăng nhập</span>
+                            </div>
+
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <label class="auth-form__lab">Tên</label>
+                                    <input type="text" id="name" class="auth-form__input"
+                                        placeholder="Nhập tên của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <label class="auth-form__lab">Email</label>
+                                    <input type="text" id="user" class="auth-form__input"
+                                        placeholder="Nhập email của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <label class="auth-form__lab">Mật khẩu</label>
+                                    <input type="password" id="pass" class="auth-form__input"
+                                        placeholder="Mật khẩu tối thiểu 8 ký tự">
+                                </div>
+                            </div>
+
+                            <div class="auth-form__controls">
+                                <button type="button" class="btn btn--normal auth-form__controls-back">TRỞ LẠI</button>
+                                <button type="submit" class="btn btn--primary">ĐĂNG KÝ</button>
+                            </div>
+                        </div>
+
+                        <div class="auth-form__socials">
+                            <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fab fa-facebook"></i>
+                                <span class="auth-form__socials--label">Kết nối với Facebook</span>
+                            </a>
+                            <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fab fa-google"></i>
+                                <span class="auth-form__socials--label">Kết nối với Google</span>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+                <script src="Script/user.js"></script>
+                <form id="loginForm" class="hidden">
+                    <div class="auth-form">
+                        <div class="auth-form__container">
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__heading">Đăng nhập</h3>
+                                <span class="auth-form__switch-btn" id="switchToRegister">Đăng ký</span>
+                            </div>
+
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <label class="auth-form__lab">Email</label>
+                                    <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <label class="auth-form__lab">Mật khẩu</label>
+                                    <input type="password" class="auth-form__input"
+                                        placeholder="Mật khẩu tối thiểu 8 ký tự">
+                                </div>
+                            </div>
+
+                            <div class="auth-form__aside">
+                                <div class="auth-form__help">
+                                    <a href="" class="auth-form_help-link">Quên mật khẩu</a>
+                                </div>
+                            </div>
+
+                            <div class="auth-form__controls">
+                                <button type="button" class="btn btn--normal auth-form__controls-back">TRỞ LẠI</button>
+                                <button type="submit" class="btn btn--primary">ĐĂNG NHẬP</button>
+                            </div>
+                        </div>
+
+                        <div class="auth-form__socials">
+                            <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fab fa-facebook"></i>
+                                <span class="auth-form__socials--label">Đăng nhập với Facebook</span>
+                            </a>
+                            <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fab fa-google"></i>
+                                <span class="auth-form__socials--label">Đăng nhập với Google</span>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const overlay_login = document.getElementById('overlay_login');
+            const modal = document.querySelector('.modal');
+            const buttonLogin = document.getElementById('button-login');
+
+            // Sự kiện click cho overlay
+            overlay_login.addEventListener('click', function () {
+                console.log('Overlay clicked'); // Kiểm tra xem sự kiện có được kích hoạt không
+                modal.style.display = 'none'; // Ẩn modal
+            });
+
+            // Hiển thị modal khi nhấp vào nút "Đăng nhập"
+            buttonLogin.addEventListener('click', function () {
+                console.log('Login button clicked');
+                modal.style.display = 'flex'; // Hiển thị modal
+                showForm('loginForm'); // Hiển thị form đăng nhập
+            });
+
+            // Chuyển đổi giữa các form
+            function showForm(formId) {
+                document.getElementById('registerForm').classList.add('hidden');
+                document.getElementById('loginForm').classList.add('hidden');
+
+                if (formId) {
+                    document.getElementById(formId).classList.remove('hidden');
+                }
+            }
+
+            document.getElementById('switchToLogin').onclick = function () {
+                showForm('loginForm');
+            };
+
+            document.getElementById('switchToRegister').onclick = function () {
+                showForm('registerForm');
+            };
+        });
+    </script>
+</body>
+
+</html>

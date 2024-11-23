@@ -1,0 +1,17 @@
+.hidden {
+    display: none;
+}
+
+.auth-form__switch-btn {
+    cursor: pointer;
+}
+
+.modal {
+    display: flex;
+    /* Hoặc block khi modal được hiển thị */
+}
+
+.modal.hidden {
+    display: none;
+    /* Quy tắc này ẩn modal */
+}

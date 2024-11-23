@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSITE DU LỊCH</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/tintuc.css">
+    <link rel="stylesheet" href="CSS/formanhien.css">
+    <link rel="stylesheet" href="CSS/login.css">
+    <script src="Script/index.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <!--form res-->
+            <div id="AuthContainer">
+                <form id="registerForm">
+                    <div class="auth-form">
+                        <div class="auth-form__container">
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__heading">Đăng ký</h3>
+                                <span class="auth-form__switch-btn" id="switchToLogin">
+                                    Đăng nhập
+                                </span>
+                            </div>
+
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <label for="" class="auth-form__lab">Tên</label>
+                                    <input type="text" id="name" class="auth-form__input"
+                                        placeholder="Nhập tên của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <label for="" class="auth-form__lab">Email</label>
+                                    <input type="text" id="user" class="auth-form__input"
+                                        placeholder="Nhập email của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <label for="" class="auth-form__lab">Mật khẩu</label>
+                                    <input type="password" id="pass" class="auth-form__input"
+                                        placeholder="Mật khẩu tối thiểu 8 ký tự">
+                                </div>
+                            </div>
+
+
+                            <div class="auth-form__controls">
+                                <button class="btn btn--normal auth-form__controls-back ">
+                                    TRỞ LẠI
+                                </button>
+                                <button class="btn btn--primary ">
+                                    ĐĂNG KÝ
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="auth-form__socials">
+                            <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fab fa-facebook"></i>
+                                <span class="auth-form__socials--label">
+                                    Kết nối với Facebook
+                                </span>
+                            </a>
+                            <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fab fa-google"></i>
+
+                                <span class="auth-form__socials--label"> Kết nối với Google
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </form>
+                <script src="Script/user.js"></script>
+                <form id="loginForm" class="hidden">
+                    <!--form login-->
+                    <div class="auth-form">
+                        <div class="auth-form__container">
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__heading">Đăng nhập</h3>
+                                <span class="auth-form__switch-btn" id="switchToRegister">
+                                    Đăng ký
+                                </span>
+                            </div>
+
+                            <div class="auth-form__form">
+
+                                <div class="auth-form__group">
+                                    <label for="" class="auth-form__lab">Email</label>
+                                    <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <label for="" class="auth-form__lab">Mật khẩu</label>
+                                    <input type="password" class="auth-form__input"
+                                        placeholder="Mật khẩu tối thiểu 8 ký tự">
+                                </div>
+                            </div>
+                            <div class="auth-form__aside">
+                                <div class="auth-form__help">
+                                    <a href="" class="auth-form_help-link">Quên mật khẩu</a>
+
+                                </div>
+                            </div>
+
+                            <div class="auth-form__controls">
+                                <button class="btn btn--normal auth-form__controls-back ">
+                                    TRỞ LẠI
+                                </button>
+                                <button class="btn btn--primary ">
+                                    ĐĂNG NHẬP
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="auth-form__socials">
+                            <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fab fa-facebook"></i>
+                                <span class="auth-form__socials--label">
+                                    Đăng nhập với Facebook
+                                </span>
+                            </a>
+                            <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fab fa-google"></i>
+
+                                <span class="auth-form__socials--label"> Đăng nhập với Google
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </form>
+
+
+
+
+            </div>
+            <script>
+                document.getElementById('switchToLogin').onclick = function () {
+                    document.getElementById('registerForm').classList.add('hidden');
+                    document.getElementById('loginForm').classList.remove('hidden');
+                };
+
+                document.getElementById('switchToRegister').onclick = function () {
+                    document.getElementById('loginForm').classList.add('hidden');
+                    document.getElementById('registerForm').classList.remove('hidden');
+                };
+            </script>
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

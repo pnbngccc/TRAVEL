@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSITE DU LỊCH</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/thithuc.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/thongtincanbiet.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="app">
+        <header class="header-nav">
+            <div class="grid">
+                <div class="header__menu_head">
+                    <div class="large secondary menu header-bar">
+                        <!-- bên trái menu-->
+                        <div class="left logo-brand ">
+                            <div class="logo ">
+                                Travel
+                            </div>
+
+                        </div>
+                        <!--search-->
+                        <div class="header_search search-box ">
+                            <input type="text" id="searchInput" placeholder="Tìm kiếm">
+                            <button class="header_search-btn" id="searchButton">
+                                <i class="header_search-btn-icon fas fa-search"></i>
+                            </button>
+                        </div>
+                        <!--AVT khi login rồi-->
+                        <!-- <div class="header_user">
+                            <img src="hinh/10.png" alt="" class="header_user__avt">
+                            <span class="header_user_name">Anh Anh</span>
+                           
+                            <ul class="header_user-menu">
+                                <li class="header_user-item">
+                                    <a href="">Trang cá nhân</a>
+                                </li>
+                                <li class="header_user-item">
+                                    <a href="">Đăng xuất</a>
+                                </li>
+
+                            </ul>
+                        </div> -->
+                        <!--bên phải menu-->
+                        <div class="right menu desktop user-infomation">
+                            <div class="item item_sign-up ">
+                                <a href="#">Đăng ký</a>
+                            </div>
+                            <div class="item">
+                                <button class="ui primary button" id="button-login">
+                                    Đăng nhập
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+        </header>
+        <!--Menu 2-->
+        <header class="header-nav--two" id="menu">
+            <div class="grid">
+                <nav class="header-navbar">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item">
+                            <a href="index.html" class="nav_item_link">
+                                Trang chủ
+                            </a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="#" class="nav_item_link">Kế hoạch chuyến đi
+                            </a>
+
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="thongtincanbiet.html" class="nav_item_link">Thông tin cần biết
+                            </a>
+                            <!-- menu con sổ xuống cấp 1 -->
+                            <ul>
+                                <li class="submenu"><a href="thithuc.html">Thị thực</a></li>
+                                <li class="submenu"><a href="dichuyen.html">Di chuyển</a> </li>
+                                <li class="submenu"><a href="antoan.html">An toàn</a> </li>
+                                <li class="submenu"><a href="tramthongtin.html">Trạm thông tin</a> </li>
+                            </ul>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="#" class="nav_item_link">Lễ hội & sự kiện
+
+                            </a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="tintuc.html" class="nav_item_link">Tin tức</a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="" class="nav_item_link">Liên Hệ</a>
+                        </li>
+                    </ul>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            document.getElementById('searchButton').addEventListener('click', function () {
+                                var searchTerm = document.getElementById('searchInput').value.trim();
+                                if (searchTerm) {
+                                    window.location.href = "search_results_page.jsp?query=" + encodeURIComponent(searchTerm);
+                                } else {
+                                    alert("Vui lòng nhập từ khóa tìm kiếm!"); // Thông báo nếu ô tìm kiếm trống
+                                }
+                            });
+                        });
+                    </script>
+                    <script>
+                        window.onscroll = function () { myFunction() };
+                        var header = document.getElementById("menu");
+                        var sticky = header.offsetTop;
+                        function myFunction() {
+                            if (window.pageYOffset > sticky) {
+                                header.classList.add("sticky"); // Thêm lớp sticky nếu cuộn qua vị trí
+                            } else {
+                                header.classList.remove("sticky"); // Bỏ lớp sticky nếu không còn cuộn qua
+                            }
+                        }
+
+                    </script>
+                </nav>
+            </div>
+
+        </header>
+        <header class="image-head">
+            <div class="header-nav-img">
+                <img src="hinh/thongtin.jpg" style="height: 400px">
+            </div>
+        </header>
+
+
+
+    </div>
+    <!-- <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body"> -->
+    <!--form res-->
+    <!-- <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng ký</h3>
+                        <span class="auth-form__switch-btn">
+                            Đăng nhập
+                        </span>
+                    </div>
+
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Tên</label>
+                            <input type="text" class="auth-form__input" placeholder="Nhập tên của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Email</label>
+                            <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Mật khẩu</label>
+                            <input type="password" class="auth-form__input" placeholder="Mật khẩu tối thiểu 8 ký tự">
+                        </div>
+                    </div>
+
+
+                    <div class="auth-form__controls">
+                        <button class="btn btn--normal auth-form__controls-back ">
+                            TRỞ LẠI
+                        </button>
+                        <button class="btn btn--primary ">
+                            ĐĂNG KÝ
+                        </button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-facebook"></i>
+                        <span class="auth-form__socials--label">
+                            Kết nối với Facebook
+                        </span>
+                    </a>
+                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-google"></i>
+
+                        <span class="auth-form__socials--label"> Kết nối với Google
+                        </span>
+                    </a>
+                </div>
+
+            </div> -->
+
+    <!--form login-->
+    <!-- <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng nhập</h3>
+                        <span class="auth-form__switch-btn">
+                            Đăng ký
+                        </span>
+                    </div>
+
+                    <div class="auth-form__form">
+
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Email</label>
+                            <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Mật khẩu</label>
+                            <input type="password" class="auth-form__input" placeholder="Mật khẩu tối thiểu 8 ký tự">
+                        </div>
+                    </div>
+                    <div class="auth-form__aside">
+                        <div class="auth-form__help">
+                            <a href="" class="auth-form_help-link">Quên mật khẩu</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn btn--normal auth-form__controls-back ">
+                            TRỞ LẠI
+                        </button>
+                        <button class="btn btn--primary ">
+                            ĐĂNG NHẬP
+                        </button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-facebook"></i>
+                        <span class="auth-form__socials--label">
+                           Đăng nhập với Facebook
+                        </span>
+                    </a>
+                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-google"></i>
+
+                        <span class="auth-form__socials--label"> Đăng nhập với Google
+                        </span>
+                    </a>
+                </div>
+
+            </div> -->
+
+    </header>
+
+    <div class="app_container">
+        <div class="grid">
+            <div class="grid__row">
+
+                <div class="grid_column-1-5"></div>
+                <div class="grid_column-9">
+                    <!--Sơ lược TPHCM-->
+                    <div class="container__content">
+                        <div class="information-content">
+                            <a href="index.html"> Trang chủ </a>><a href="thongtincanbiet.html"> Thông tin cần biết </a>
+                            <h2 class="section-heading-container"> Về Thành phố Hồ Chí Minh </h2>
+                        </div>
+                        <div class="container_info-list">
+                            <div class="grid__row">
+                                <div class="grid_column-12">
+                                    <div class="TTcb">
+                                        <div class="container" id="container">
+                                            <div class="form-container form">
+                                                <div class="slideshow-container">
+                                                    <div class="slide fade">
+                                                        <img src="hinh/slide1.jpg" alt="Slide 1">
+                                                    </div>
+                                                    <div class="slide fade">
+                                                        <img src="hinh/slide2.jpg" alt="Slide 2">
+                                                    </div>
+                                                    <div class="slide fade">
+                                                        <img src="hinh/slide3.jpg" alt="Slide 3">
+                                                    </div>
+                                                </div>
+                                                <div class="dot-container" style="text-align:center">
+                                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                                    <span class="dot" onclick="currentSlide(3)"></span>
+                                                </div>
+
+
+                                            </div>
+                                            <script>
+                                                let slideIndex = 1;
+                                                showSlides(slideIndex);
+
+                                                // Chức năng để thay đổi slide
+                                                function changeSlide(n) {
+                                                    showSlides(slideIndex += n);
+                                                }
+
+                                                // Chức năng để chọn slide hiện tại
+                                                function currentSlide(n) {
+                                                    showSlides(slideIndex = n);
+                                                }
+
+                                                // Chức năng để hiển thị slide
+                                                function showSlides(n) {
+                                                    let i;
+                                                    let slides = document.getElementsByClassName("slide");
+                                                    let dots = document.getElementsByClassName("dot");
+
+                                                    // Kiểm tra nếu chỉ số vượt quá số lượng slide
+                                                    if (n > slides.length) { slideIndex = 1; }
+                                                    if (n < 1) { slideIndex = slides.length; }
+
+                                                    // Ẩn tất cả các slide
+                                                    for (i = 0; i < slides.length; i++) {
+                                                        slides[i].style.display = "none";
+                                                    }
+
+                                                    // Xóa lớp active từ tất cả các dot
+                                                    for (i = 0; i < dots.length; i++) {
+                                                        dots[i].className = dots[i].className.replace(" active", "");
+                                                    }
+
+                                                    // Hiển thị slide hiện tại
+                                                    slides[slideIndex - 1].style.display = "block";
+                                                    // Đánh dấu dot hiện tại là active
+                                                    dots[slideIndex - 1].className += " active";
+                                                }
+
+                                                // Tự động chuyển slide mỗi 5 giây
+                                                setInterval(() => {
+                                                    changeSlide(1);
+                                                }, 5000);
+                                            </script>
+                                            <div class="toggle-container">
+                                                <div class="toggle">
+
+                                                    <div class="toggle-panel toggle-right">
+
+                                                        <diV class="information-box">
+
+                                                            <H2> Chào mừng đến với Thành phố Hồ Chí Minh! </H2>
+                                                            <p>
+                                                                Thành phố Hồ Chí Minh là đô thị trẻ bởi lịch sử hình
+                                                                thành
+                                                                và phát triển chỉ mới hơn 300 năm. Được biết đến nhiều
+                                                                với
+                                                                tên gọi Sài Gòn, Thành phố sôi động này được ví như “Hòn
+                                                                ngọc Viễn Đông” bởi những công trình kiến trúc di sản
+                                                                quyến
+                                                                rũ, không khí năng động, sôi động, náo nhiệt và con
+                                                                người
+                                                                thân thiện. Đây là những đặc điểm giúp Thành phố Hồ Chí
+                                                                Minh
+                                                                trở thành một điểm đến thu hút với du khách trong nước
+                                                                và
+                                                                quốc tế.
+                                                            </p>
+                                                        </div>
+                                                        <button class="hidden" id="submit">
+                                                            <a href="#" class="hidden">Xem thêm</a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <!---Question-->
+                        <div class="container-all--qu">
+                            <div class="container_qu">
+                                <h2 class="section-heading"> Câu hỏi thường gặp </h2>
+                            </div>
+                            <div class="container_qu-list">
+                                <div class="grid__row">
+                                    <div class="grid_column-12">
+                                        <div class="home_qu-item">
+                                            <div class="home_qu-item__img-circle">
+                                                <div class="home_qu-item-link" onclick="toggleAnswer(this)">
+                                                    Thị thực
+                                                    <button class="home_qu-item__icon">
+                                                        <i class="fas fa-sort-down"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="answer" style="display: none;">
+                                                    Ngày 15/3/2022, Chính phủ ban hành Nghị quyết số 32/NQ-CP về việc
+                                                    miễn
+                                                    thị thực cho công dân các nước: Cộng hòa liên bang Đức, Cộng hòa
+                                                    Pháp,
+                                                    Cộng hòa I-ta-li-a, Vương quốc Tây Ban Nha, Liên hiệp Vương quốc Anh
+                                                    và
+                                                    Bắc Ai-len, Liên Bang Nga, Nhật Bản, Đại Hàn Dân Quốc, Vương quốc
+                                                    Đan
+                                                    Mạch, Vương quốc Thụy Điển, Vương quốc Na-uy, Cộng hòa Phần Lan và
+                                                    Cộng
+                                                    hòa Bê-la-rút.
+
+                                                    Xem thêm thông tin chi tiết tại đây
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-12">
+                                        <div class="home_qu-item">
+                                            <div class="home_qu-item__img-circle">
+                                                <div class="home_qu-item-link" onclick="toggleAnswer(this)">
+                                                    Di chuyển
+                                                    <button class="home_qu-item__icon">
+                                                        <i class="fas fa-sort-down"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="answer" style="display: none;">
+                                                    Bạn có thể di chuyển đến và quanh Thành phố Hồ Chí Minh với đa dạng
+                                                    các
+                                                    phương tiện bằng đường hàng không, đường bộ, đường thuỷ và đường
+                                                    sắt.
+                                                    Vui lòng tìm hiểu chi tiết tại đây.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-12">
+                                        <div class="home_qu-item">
+                                            <div class="home_qu-item__img-circle">
+                                                <div class="home_qu-item-link" onclick="toggleAnswer(this)">
+                                                    Hoàn thuế
+                                                    <button class="home_qu-item__icon">
+                                                        <i class="fas fa-sort-down"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="answer" style="display: none;">
+                                                    1. Khi đến Việt Nam, khách quốc tế mua sắm hàng hóa có quyền được
+                                                    hoàn
+                                                    lại 85% thuế Giá trị gia tăng (VAT) 10% đối với hàng hóa đủ điều
+                                                    kiện
+                                                    được mua từ một cửa hàng hoàn thuế VAT đã đăng ký, nhờ vào một
+                                                    chương
+                                                    trình thử nghiệm được áp dụng vào năm 2012 và đã được được điều
+                                                    chỉnh
+                                                    nhiều lần kể từ đó.
+                                                    <br>
+                                                    2. Để được hoàn thuế VAT, du khách cần phải đáp ứng các điều kiện
+                                                    sau:
+                                                    <br>
+                                                    Hàng hóa mua phải chịu thuế GTGT, chưa qua sử dụng và được phép đi
+                                                    máy
+                                                    bay Hàng hóa mua vào không được nằm trong danh mục cấm hoặc hạn chế
+                                                    xuất
+                                                    khẩu.<br>
+                                                    Hàng hóa mua phải có hóa đơn, tờ khai hoàn thuế GTGT trong vòng 30
+                                                    ngày
+                                                    kể từ ngày khởi hành.<br>
+                                                    Hàng hóa đã mua phải được mua từ một cửa hàng duy nhất trong một
+                                                    ngày và
+                                                    phải có giá trị ít nhất là 2 triệu đồng.<br>
+                                                    3. Để được hoàn thuế VAT, hãy làm theo thủ tục sau:<br>
+                                                    Khi mua hàng, hãy nộp hộ chiếu của bạn cho đại lý bán lẻ để họ lập
+                                                    tờ
+                                                    khai hoàn thuế GTGT. Họ sẽ cấp cho bạn bản sao gốc nhưng hãy đảm bảo
+                                                    kiểm tra xem tất cả thông tin của bạn là chính xác.<br>
+
+                                                    Khi bạn có mặt tại sân bay Tân Sơn Nhất, đến địa điểm kiểm tra hải
+                                                    quan
+                                                    hoàn thuế GTGT, bạn sẽ phải xuất trình hàng hóa đã mua, hộ chiếu,
+                                                    hóa
+                                                    đơn và tờ khai thuế GTGT.<br>
+
+                                                    Sau khi đã hoàn thành thủ tục giấy tờ để nhận được tờ khai của mình,
+                                                    bạn
+                                                    sẽ cần phải gửi thẻ lên máy bay từ cuộc chiến quốc tế và các hóa đơn
+                                                    cùng với biểu mẫu khai thuế VAT của mình cho quầy hoàn thuế VAT.<br>
+
+                                                    Đây là nơi bạn sẽ nhận được tiền hoàn lại của mình. Nó sẽ được tính
+                                                    bằng
+                                                    tiền Việt Nam đồng nên sau đó bạn sẽ phải đến quầy giao dịch tiền
+                                                    tệ.
+                                                    Bạn sẽ đến giao dịch BIDV và VietinBank tại Tân Sơn Nhất.<br>
+
+                                                    Lưu ý:<br>
+                                                    Việc hoàn thuế VAT chỉ được áp dụng đối với hàng hóa do khách du
+                                                    lịch
+                                                    mang theo khi xuất cảnh. Đối với cảng biển, chỉ hoàn trả nếu tàu đi
+                                                    nước
+                                                    ngoài trực tiếp từ cảng. Hãy nhớ rằng những chuyến đi của con tàu
+                                                    này
+                                                    chỉ diễn ra ba lần một năm.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-12">
+                                        <div class="home_qu-item">
+                                            <div class="home_qu-item__img-circle">
+                                                <div class="home_qu-item-link" onclick="toggleAnswer(this)">
+                                                    Thẻ sim & số điện thoại cần thiết
+                                                    <button class="home_qu-item__icon">
+                                                        <i class="fas fa-sort-down"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="answer" style="display: none;">
+                                                    Nhận thẻ SIM nội địa ở Việt Nam nhanh chóng và không tốn kém. Có 03
+                                                    nhà
+                                                    khai thác mạng GSM lớn tại Việt Nam và đều có vùng phủ sóng tốt:
+                                                    <br>
+                                                    Viettel<br>
+                                                    Vinaphone<br>
+                                                    Mobifone<br>
+                                                    SIM điện thoại trả trước (chưa tặng kèm dữ liệu internet) có thể
+                                                    được
+                                                    tìm thấy ngay tại sân bay Tân Sơn Nhất và mọi đại lý điện thoại
+                                                    trong
+                                                    thành phố với nhiều mức giá khác nhau. Bạn sẽ cần xuất trình hộ
+                                                    chiếu để
+                                                    đăng ký thẻ SIM. Giá thẻ SIM, tin nhắn SMS và cước phí cuộc gọi điện
+                                                    thoại cực kỳ phải chăng trong phạm vi Việt Nam. Bạn có thễ nạp tín
+                                                    dụng
+                                                    điện thoại với mức giá tăng từ 20.000đ đến 100.000đ trên hầu hét các
+                                                    mạng. Thẻ SIM chỉ sử dụng dữ liệu có thể có giá từ 100.000 đồng đến
+                                                    200.000 đồng tuỳ thuộc vào số lượng dữ liệu được mua.<br>
+
+                                                    Dưới đây là các số điện thoại bạn có thể cần khi ở Việt Nam:<br>
+
+                                                    Mã quay số quốc tế: +84<br>
+                                                    Cuộc gọi trong nước (Trong phạm vi Việt Nam): 0 + Mã vùng +
+                                                    Telephone
+                                                    No. <br>
+                                                    Cuộc gọi Quốc tế (Ngoài Việt Nam): 00 + Mã quốc gia + Mã vùng + Số
+                                                    điện
+                                                    thoại<br>
+                                                    Sau đây là danh sách các số điện thoại hữu ích bạn cần có khi đến
+                                                    Việt
+                                                    Nam:<br>
+
+                                                    +84: Mã quay số quốc té<br>
+                                                    101: Dịch vụ điện thoại đường dài trong nước<br>
+                                                    1080: Thông tin xã họi và văn hoá<br>
+                                                    110: Dịch vụ điện thoại quốc tế<br>
+                                                    113: Cảnh sát<br>
+                                                    114: Đội cứu hoả<br>
+                                                    115: Xe cứu thương<br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-12">
+                                        <div class="home_qu-item">
+                                            <div class="home_qu-item__img-circle">
+                                                <div class="home_qu-item-link" onclick="toggleAnswer(this)">
+                                                    Ổ cắm điện
+                                                    <button class="home_qu-item__icon">
+                                                        <i class="fas fa-sort-down"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="answer" style="display: none;">
+                                                    <!-- Nội dung câu trả lời -->
+                                                    Thông tin về visa...Điện áp cung cấp ở Việt Nam là 220V. Hầu hết các
+                                                    ổ
+                                                    cắm đều phù hợp với phích cắm có hai ngạnh tròn. Nếu bạn cần bộ
+                                                    nguòn
+                                                    phù hợp, bạn có thể tìm thấy chúng ở bất kỳ cửa hàng điện nào hoặc
+                                                    yêu
+                                                    cầu khách sạn của bạn để được hỗ trợ. Việc cắt và tăng đột biến điện
+                                                    thường không phổ biến nhưng có thể xảy ra theo thời gian tuỳ thuộc
+                                                    vào
+                                                    địa điểm.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-12">
+                                        <div class="home_qu-item">
+                                            <div class="home_qu-item__img-circle">
+                                                <div class="home_qu-item-link" onclick="toggleAnswer(this)">
+                                                    Internet & bưu chính
+                                                    <button class="home_qu-item__icon">
+                                                        <i class="fas fa-sort-down"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="answer" style="display: none;">
+                                                    Việt Nam có hệ thống kết nối tốt ở hầu hết các điểm đến, bạn có thể
+                                                    dễ
+                                                    dàng tìm thấy kết nối tại các quán cà phê, spa, cửa hàng, khách sạn
+                                                    và
+                                                    nhà hàng. Truy cập Internet công cộng miễn phí có sẵn ở một số trung
+                                                    tâm
+                                                    du lịch và sân bay lớn. Các gói 3G và 4G là một sự lựa chọn hợp lý
+                                                    nếu
+                                                    bạn có ý định đến các vùng sâu vùng xa hoặc cần kết nối mạng thường
+                                                    xuyên. <br>
+
+                                                    Dịch vụ bưu chính của Việt Nam nói chung là đáng tin cậy, mặc dù các
+                                                    gói
+                                                    hàng có thể mất nhiều thời gian hơn dự kiến và thường được giữ lại
+                                                    bưu
+                                                    điện để nhận. Hộp thư không được sử dụng phổ biến. Nếu bạn đang gửi
+                                                    bưu
+                                                    thiếp về nhà, hãy đưa chúng đến khách sạn của bạn để gửi qua bưu
+                                                    điện
+                                                    hoặc gửi trực tiếp từ bưu điện.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-12">
+                                        <div class="home_qu-item">
+                                            <div class="home_qu-item__img-circle">
+                                                <div class="home_qu-item-link" onclick="toggleAnswer(this)">
+                                                    Tiền tệ
+                                                    <button class="home_qu-item__icon">
+                                                        <i class="fas fa-sort-down"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="answer" style="display: none;">
+                                                    Đơn vị tiền tệ của Việt Nam là Việt Nam đồng (VND), được biểu thị
+                                                    bằng
+                                                    ký hiệu “đ”. Bạn có thể tìm thấy các tờ tiền với mệnh giá 200đ;
+                                                    500đ;
+                                                    1,000đ; 2,000đ; 5,000đ; 10,000đ; 20,000đ; 50,000đ; 100,000đ;
+                                                    200,000đ và
+                                                    500,000đ. Đối với người lần đầu sử dụng, có thể bỏ qua ba số không
+                                                    cuối
+                                                    cùng cho đến khi bạn hiểu được sự chuyển đổi. <br>
+
+
+
+                                                    Tiền mặt thường được sử dụng cho các giao dịch mua nhỏ. Tuy nhiên,
+                                                    hầu
+                                                    hết các cơ sở kinh doanh đều sẽ chấp nhận thanh toán từ các nhà cung
+                                                    cấp
+                                                    thẻ tín dụng như Visa card. Ngoài ra, các khách sạn, công ty điều
+                                                    hành
+                                                    tour du lịch, cửa hàng, nhà hàng và cửa hàng tạp hoá thường chấp
+                                                    nhận
+                                                    International debit và credit cards.<br>
+
+                                                    Nếu bạn cần đổi tiền, các quầy thu đổi tiền ngoại tệ được đặt sẵn
+                                                    tại
+                                                    các sân bay, ngân hàng và trung tâm đổi tiền chính thức. Tuy nhiên,
+                                                    xin
+                                                    lưu ý rằng có thể rất khó mua đông đô la khi bạn ở Việt Nam. Đối với
+                                                    hầu
+                                                    hết khách du lịch, chúng tôi khuyên bạn nên sử dụng máy ATM thay vì
+                                                    các
+                                                    điểm thu đổi ngoại tệ. Máy ATM được phổ biến rộng rãi trên toàn
+                                                    quốc. Số
+                                                    tiền rút tối đa đối với thẻ nước ngoài thường từ 2 – 3 triệu cho mổi
+                                                    lần
+                                                    giao dịch.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid_column-12">
+                                        <div class="home_qu-item">
+                                            <div class="home_qu-item__img-circle">
+                                                <div class="home_qu-item-link" onclick="toggleAnswer(this)">
+                                                    Khí hậu & thời tiết
+                                                    <button class="home_qu-item__icon">
+                                                        <i class="fas fa-sort-down"></i>
+                                                    </button>
+
+                                                </div>
+                                                <div class="answer" style="display: none;">
+                                                    Tháng 5 đến tháng 11: Lượng mưa rải rác, khí hậu nóng ẩm <br>
+
+                                                    Tháng 12 đến tháng 4: Trời không mây, nắng nóng <br>
+
+                                                    Miền Nam Việt Nam và Thành phố Hồ Chí Minh có nhiệt độ ổn định quanh
+                                                    năm. Thành phố Hồ Chí Minh có khí hậu nóng và khô hoặc nóng và mưa.
+                                                    Khí
+                                                    hậu trong lành dễ chịu vào đầu năm, nắng nóng vào giữa năm. Nhiệt độ
+                                                    trung bình có nắng vào khoảng 30 độ C. Từ tháng 5 đến tháng 11, có
+                                                    lượng
+                                                    mưa vừa đến mưa rất to vào buổi chiều và thường kéo dài vài giờ.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            function toggleAnswer(element) {
+                                const answer = element.nextElementSibling; // Lấy phần tử câu trả lời kế tiếp
+                                if (answer.style.display === "none" || answer.style.display === "") {
+                                    answer.style.display = "block"; // Hiển thị câu trả lời
+                                } else {
+                                    answer.style.display = "none"; // Ẩn câu trả lời
+                                }
+                            }
+                        </script>
+                        <!---Question-->
+                        <div class="container-all--qu">
+                            <div class="container_qu">
+                                <h2 class="section-heading"> Trạm thông tin & Hỗ trợ khách du lịch </h2>
+                                <span class="a-span-qu">
+                                    Bạn đang tìm hỗ trợ thông tin về du lịch hoặc cần thêm vài gợi ý cho hành trình khám
+                                    phá
+                                    các điểm tham quan khác nhau ở Thành phố Hồ Chí Minh? Hãy đến với Trạm Thông tin và
+                                    Hỗ
+                                    trợ khách du lịch, đội ngũ nhân viên nhiệt tình sẽ cung cấp nhiều thông tin hữu ích
+                                    cho
+                                    chuyến du lịch của bạn càng thêm thú vị.
+                                    <br>
+
+
+                                </span>
+                                <span class="a-span-qu"> <a href="tramthongtin.html">Xem thêm -></a>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-1">
+            <div class="grid">
+                <div class="grid__row">
+
+                    <div class="grid_column-2-5">
+                        <div class="footer-security">
+                            <img src="hinh/Travel.png" class="logo-travel">
+                            <div class="footer_secutiry--travel">
+                                <span class="footer_secutiry--travel-text">
+                                    Travel - Trang website du lịch <br>
+                                    © Bản quyền thuộc về Travel.
+
+                                </span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_column-1"></div>
+                    <div class="grid_column-5-1">
+                        <div class="footer-button">
+                            <div class="footer-text">
+                                <h4 class="footer-h4-signup"> ĐĂNG KÝ NHẬN TIN </h2>
+                                    <span class="footer-heading">
+                                        Nhận những câu chuyện du lịch mới đến hộp thư của bạn.
+                                    </span>
+                            </div>
+
+                            <div class="footer-button-signup">
+                                <input type="text" placeholder="Nhập địa chỉ email của bạn">
+                                <button class="signup-butt">Đăng ký</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid_column-1"></div>
+                    <div class="grid_column-2-5">
+                        <div class="icon-iconfooter">
+                            <h4 class="footer-h4">Liên hệ với chúng tôi</h4>
+                            <div class="social-icons">
+
+                                <i class="fab fa-facebook"></i>
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer--list">
+                    <div class="grid__row">
+                        <div class="grid_column-1-5"></div>
+                        <div class="grid_column-2">
+                            <div class="footer-item--2">
+
+                                <div class="footer-item-link">
+                                    <a href="#" class="footer-item-link--list">
+                                        <h4>Điều khoản & điều kiện</h4>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="grid_column-2">
+                            <div class="footer-item--2">
+
+                                <div class="footer-item-link">
+
+                                    <h4>Email: contact_travel@gmail.com</h4>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="grid_column-2">
+                            <div class="footer-item--2">
+
+                                <div class="footer-item-link">
+
+                                    <a href="#" class="footer-item-link--list">
+                                        <h4>Chính sách bảo mật</h4>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="grid_column-1-5"></div>
+                    </div>
+                </div>
+        </footer>
+
+
+    </div>
+</body>
+
+</html>

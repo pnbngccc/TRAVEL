@@ -1,0 +1,133 @@
+.header-nav--two {
+    height: 60px;
+
+    background-color: var(--header);
+
+    transition: top 0.3s, opacity 0.3s;
+
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Nằm trên các phần tử khác */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.header-nav--two.dimmed {
+    opacity: 0.5;
+}
+
+.navbar {
+    z-index: 999;
+
+    position: relative;
+
+}
+
+.header-nav-list {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.header-nav-item {
+    margin: 0 15px;
+
+}
+
+.nav_item_link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+
+    line-height: 60px;
+
+}
+
+/* Hiệu ứng hover */
+.nav_item_link:hover {
+    opacity: 0.7;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* Submenu styles */
+.header-nav-item {
+    position: relative;
+}
+
+.header-nav-item ul {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+    background-color: #f8f9fa;
+
+    border: 1px solid #ffffff;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    z-index: 100;
+
+    min-width: 150px;
+
+    opacity: 0.9;
+}
+
+.header-nav-item:hover ul {
+    display: block;
+
+}
+
+.submenu {
+    margin: 0;
+
+}
+
+.submenu a {
+    display: block;
+    padding: 10px 10px;
+    color: #333;
+    text-decoration: none;
+    /* Bỏ gạch chân */
+    transition: background 0.3s;
+    /* Hiệu ứng chuyển màu nền */
+    margin: 0;
+    /* Bỏ margin */
+    font-weight: 550;
+    /* Đặt font-weight */
+    white-space: nowrap;
+    /* Ngăn chặn xuống dòng */
+    font-size: 1.3rem;
+    /* Kích thước chữ */
+    text-align: left;
+    box-sizing: border-box;
+    /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+.submenu a:hover {
+    background-color: #f0f0f0;
+}

@@ -1,0 +1,315 @@
+/* Header phải */
+#button-login {
+    font-weight: 600;
+    color: #fff;
+    background-color: #ff3366;
+    border: none;
+    margin: 1.2rem 1rem;
+    padding: 2rem 0.5rem;
+    border-radius: 10px;
+
+}
+
+.item_sign-up a {
+    font-weight: 600;
+    color: #333;
+}
+
+.item,
+a {
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 8px;
+    text-decoration: none;
+}
+
+/* Header trái */
+.logo {
+
+    font-size: 3.8rem;
+    text-decoration: none;
+    margin: 0 8px;
+    position: relative;
+}
+
+.logo-brand {
+    display: inline-flex;
+    font-weight: 600;
+    color: #ff3366;
+    border: none;
+    margin: 1.2rem 1rem;
+    padding: 2rem 0.5rem;
+    border-radius: 10px;
+}
+
+/*Search*/
+.search-box {
+    display: inline-flex;
+    align-items: center;
+    width: 50%;
+    position: relative;
+    /* Để định vị biểu tượng */
+}
+
+.search-box input {
+    border-radius: 10px;
+    font-size: 1.3rem;
+    padding: 0 10px;
+    /* Padding bên trái và bên phải */
+    border: 1px solid #bab4b4;
+    height: 3rem;
+    width: 100%;
+    /* Đặt chiều rộng thành 100% */
+    outline: none;
+    background-color: white;
+}
+
+.header_search-btn {
+    position: absolute;
+
+    right: 5px;
+    /* Căn phải */
+    border: none;
+    background-color: transparent;
+    /* Làm nền trong suốt */
+    cursor: pointer;
+    height: 100%;
+    /* Chiều cao bằng input */
+    padding: 0 10px;
+    /* Padding cho nút */
+    transition: color 0.3s;
+    /* Hiệu ứng chuyển màu */
+}
+
+.header_search-btn:hover .header_search-btn-icon {
+    color: rgba(139, 135, 135, 0.7);
+
+}
+
+.header_search-btn-icon {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    transition: color 0.3s;
+    /* Hiệu ứng chuyển màu */
+}
+
+/*Trái phải */
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+/*Auth*/
+.auth-form {
+    width: 500px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.auth-form__container {
+    padding: 0 32px;
+}
+
+.auth-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    margin-top: 10px;
+}
+
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+
+}
+
+.auth-form__switch-btn {
+    font-size: 1.6rem;
+    color: #ff3366;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.auth-form__group {
+    margin-top: 10px;
+
+}
+
+label {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
+
+.auth-form__input {
+    width: 100%;
+    height: 35px;
+    margin-top: 5px;
+    padding: 0 12px;
+    font-size: 1.3rem;
+    border-radius: 2px;
+    border: 1px solid var(--border--color);
+    outline: none;
+}
+
+.auth-form__input:focus {
+    border-color: #888;
+}
+
+.auth-form__controls {
+
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+.auth-form__controls-back {
+    margin-right: 8px;
+}
+
+/*Phần login*/
+.auth-form__socials {
+    background-color: #f5f5f5;
+    padding: 16px 36px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.auth-form__socials-icon {
+    font-size: 1.8rem;
+}
+
+.auth-form__socials--facebook {
+    background-color: #3a5a98;
+    color: var(--white-color);
+}
+
+.auth-form__socials--facebook,
+.auth-form__socials-icon {
+    color: var(--white-color);
+}
+
+.auth-form__socials--label {
+    margin: 0 10px;
+    /*thay đổi khoảng cách của fb - g */
+}
+
+.auth-form__socials--google {
+    background-color: white;
+    color: #666;
+
+}
+
+.auth-form_help-link {
+    display: flex;
+    text-decoration: none;
+    font-size: 1.4rem;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+/*header phải login rồi*/
+.header_user {
+    display: flex;
+    flex-direction: row;
+    /* Đặt chiều ngang để avatar và tên nằm cạnh nhau */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    text-decoration: none;
+    border: none;
+    margin: 0;
+    /* Loại bỏ margin để nâng lên */
+    padding: 0.5rem;
+    /* Giảm padding cho gọn gàng hơn */
+    position: relative;
+    /* Để định vị menu bên dưới */
+}
+
+.header_user__avt {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    /* Khoảng cách giữa avatar và tên */
+}
+
+.header_user_name {
+    font-size: 1.3rem;
+    font-weight: 550;
+    white-space: nowrap;
+    /* Ngăn tên xuống dòng */
+    margin-right: 75px;
+    /* Thêm khoảng cách giữa tên và menu */
+}
+
+.header_user-menu {
+    position: absolute;
+    /* Định vị menu dưới tên */
+    bottom: -55px;
+    /* Đặt menu ngay dưới tên người dùng, cách ra một chút */
+    left: 40px;
+    /* Căn phải */
+    width: 140px;
+    background-color: #fff;
+    border-radius: 5px;
+    list-style: none;
+    z-index: 10000;
+    /* Đảm bảo menu nằm trên cùng */
+    padding: 0;
+    border: 1px solid var(--border--color);
+    /* Loại bỏ padding bên trong */
+    display: none;
+    /* Ẩn menu mặc định */
+
+}
+
+
+
+/* Các mục trong menu login r */
+.header_user-item a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 10px 16px;
+    transition: background-color 0.3s;
+    /* Hiệu ứng chuyển màu */
+}
+
+/* Hiệu ứng hover cho các mục menu */
+.header_user-item a:hover {
+    opacity: 0.7;
+    /* Thay đổi màu khi hover */
+}
+
+.header_user:hover .header_user-menu {
+    display: block;
+    /* Hiện menu khi hover vào phần tử người dùng */
+}
+
+/*----------------------------container + introduce-------------------*/
+.app_container {
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    font-size: 3.2rem;
+    text-align: center;
+    color: rgb(142, 37, 37);
+    margin-bottom: 10px;
+    line-height: 32px;
+}
+
+.container_content {
+    font-size: 1.5rem;
+    line-height: 32px;
+    padding: 0 10px;
+    font-weight: 500;
+
+}

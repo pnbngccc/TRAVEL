@@ -1,0 +1,220 @@
+/*----------------------------container + introduce-------------------*/
+.app_container {
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    font-size: 3.2rem;
+    text-align: center;
+    color: rgb(142, 37, 37);
+    margin-bottom: 10px;
+    line-height: 32px;
+}
+
+.container_content {
+    font-size: 1.5rem;
+    line-height: 32px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+
+
+/*----------------------------------------Option------------------------------------ */
+
+.home_option-item__img-circle {
+    border: 1px solid var(--border--color);
+    background-color: #e7d5d53d;
+    margin-top: 12px;
+    position: relative;
+    transition: transform 0.3s;
+    border-radius: 15%;
+    max-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.home_option-item__img-circle:hover {
+    transform: scale(1.05);
+    background-color: #f5edee;
+}
+
+.home_option-item__img-circle:hover a {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.home_option-item-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 500px;
+    min-height: 60px;
+}
+
+.home_option-item-link h4 {
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 550;
+    margin: 0;
+    line-height: 1;
+}
+
+.home_option-item-link i {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 550;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 1;
+    margin-left: 2px;
+}
+
+
+
+/*--------------------------------place-------------------------------*/
+.container_inprise {
+    font-size: 1.5rem;
+    line-height: 32px;
+    padding: 0 10px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.home_place-item__img img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s;
+    /* Hiệu ứng chuyển tiếp cho hình ảnh */
+    cursor: pointer;
+}
+
+
+.home_place-item__img {
+    border: 1px solid var(--border--color);
+    background-color: #e7d5d53d;
+    margin-top: 12px;
+    position: relative;
+    transition: transform 0.3s;
+    /* Hiệu ứng chuyển tiếp cho phần tử */
+
+}
+
+.home_place-item__img:hover {
+    transform: scale(1.05);
+    /* Tăng kích thước khi hover */
+}
+
+.home_place-item__img:hover img {
+    opacity: 0.65;
+}
+
+.home_place-item-link {
+    text-align: center;
+    min-height: 255px;
+    cursor: pointer;
+
+}
+
+.home_place-item-link h4 {
+    margin: 4px;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Inter */
+.container_international {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 32px;
+    padding: 0 10px;
+    font-weight: 510;
+}
+
+/* event */
+
+.container_event {
+    font-size: 1.5rem;
+    line-height: 32px;
+    padding: 0 10px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.time-line {
+    padding: 20px;
+    background-color: #f3f3f3;
+
+}
+
+.home_event-item--time-line {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.home_event-item--time {
+    position: relative;
+    padding: 20px 0;
+}
+
+.home_event-item-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Căn chỉnh giữa các phần tử */
+    position: relative;
+}
+
+.dot,
+.dot-end {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    text-decoration: none;
+    /* Bỏ gạch chân */
+    border: 1px solid var(--border--color);
+}
+
+.dot {
+    background-color: #ffffff;
+    /* Màu cho sự kiện */
+
+
+}
+
+.dot-end {
+    background-color: #f44336;
+    /* Màu cho sự kiện kết thúc */
+}
+
+.line {
+    flex-grow: 1;
+    /* Tạo độ dài cho thanh ngang */
+    height: 4px;
+    /* Độ dày của thanh */
+    background-color: #ccc;
+    /* Màu của thanh ngang */
+    margin: -8px;
+    /* Khoảng cách giữa các chấm và thanh */
+}
+
+.month-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.month-labels span {
+    font-weight: bold;
+    color: #555;
+}
+

@@ -1,0 +1,117 @@
+.form-container {
+    min-width: 70%;
+    /* Đặt chiều rộng tối đa cho form */
+    height: 70%;
+    /* Đặt chiều cao tối đa cho form */
+    overflow-y: auto;
+    /* Cho phép cuộn dọc */
+    background: white;
+    /* Màu nền cho form */
+    padding: 0;
+    /* Không có khoảng cách bên trong */
+    border-radius: 8px;
+    /* Bo góc cho form */
+    display: none;
+    /* Ẩn form ban đầu */
+    position: fixed;
+    /* Đặt vị trí cố định */
+    top: 50%;
+    /* Đưa form vào giữa màn hình */
+    left: 50%;
+    /* Đưa form vào giữa màn hình */
+    transform: translate(-50%, -50%);
+    /* Căn giữa */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Đổ bóng cho form */
+    z-index: 1001;
+    /* Đặt z-index cao hơn overlay */
+}
+
+/*form ẩn/ hiện*/
+.overlay {
+    display: none;
+    /* Ẩn overlay mặc định */
+    position: fixed;
+    top: 0;
+    /* Bắt đầu từ trên cùng */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Chiều cao toàn bộ màn hình */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Màu nền mờ */
+    z-index: 1000;
+    /* Đặt lên trên cùng để che phủ tất cả */
+    pointer-events: auto;
+    /* Cho phép tương tác với overlay */
+}
+
+
+.form-content {
+    display: flex;
+    /* Sử dụng Flexbox để chia đôi */
+    height: 100%;
+    /* Đảm bảo chiều cao của form */
+}
+
+.form-image-container {
+    flex: 1;
+    /* Phần hình ảnh chiếm 50% chiều rộng */
+    height: 100%;
+    /* Đảm bảo chiều cao bằng chiều cao của form */
+    overflow: hidden;
+    /* Ẩn phần hình ảnh nếu vượt quá */
+    padding: 0;
+    /* Không có padding */
+    margin: 0;
+    /* Không có margin */
+    justify-content: center;
+    /* Canh giữa hình ảnh */
+    align-items: center;
+    /* Canh giữa hình ảnh theo chiều dọc */
+}
+
+.form-text-container {
+    flex: 1;
+    /* Phần nội dung chiếm 50% chiều rộng */
+    padding: 20px;
+    /* Khoảng cách bên trong */
+    overflow-y: auto;
+    /* Cho phép cuộn nếu nội dung quá dài */
+    display: flex;
+    /* Sử dụng Flexbox cho nội dung */
+    flex-direction: column;
+    /* Sắp xếp theo chiều dọc */
+    justify-content: center;
+    /* Canh giữa nội dung */
+}
+
+#form-image {
+    width: 100%;
+    /* Hình ảnh chiếm toàn bộ chiều rộng */
+    height: 100%;
+    /* Hình ảnh cao bằng phần chứa */
+    object-fit: cover;
+    /* Đảm bảo hình ảnh không bị biến dạng */
+    display: block;
+    /* Ngăn cách với các thẻ khác */
+    margin: 0;
+    /* Không có margin */
+}
+
+#form-title {
+    margin-bottom: 10px;
+    /* Khoảng cách giữa tiêu đề và nội dung */
+    text-align: left;
+    /* Canh trái tiêu đề */
+    padding-left: 10px;
+}
+
+#form-text {
+    font-size: 1.4rem;
+    /* Đặt font chữ 1.4rem cho nội dung */
+    line-height: 32px;
+    text-align: justify;
+    padding-left: 10px;
+    max-height: 80%;
+}

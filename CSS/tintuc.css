@@ -1,0 +1,248 @@
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  /* Ngăn chặn hình ảnh tràn ra ngoài */
+}
+
+a {
+  width: 100%;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  /* Ẩn tất cả các slide khi không được hiển thị */
+  width: 100%;
+  /* Đảm bảo slide chiếm toàn bộ chiều rộng */
+  height: 500px;
+  /* Đặt chiều cao cố định cho tất cả các slide */
+  position: relative;
+  /* Đảm bảo các slide nằm chồng lên nhau */
+}
+
+/* Ảnh trong các slide */
+.mySlides img {
+  width: 100%;
+  /* Đảm bảo hình ảnh lấp đầy chiều rộng của slide */
+  height: 100%;
+  /* Đảm bảo hình ảnh lấp đầy chiều cao của slide */
+  object-fit: cover;
+  /* Đảm bảo hình ảnh không bị biến dạng */
+}
+
+/* Caption text */
+.text em,
+.text2 em {
+  font-size: 1.3rem;
+  line-height: 10px;
+}
+
+.text h2,
+.text2 h2 {
+  font-size: 1.7rem;
+  line-height: 20px;
+}
+
+.section-heading-slide {
+  color: black;
+}
+
+p {
+  text-align: justify;
+}
+
+.text {
+  color: #000000;
+  font-size: 1.3rem;
+  padding: 16px;
+  /* Tăng padding để tránh che mất chữ */
+  position: absolute;
+  bottom: 0;
+  /* Đặt nội dung ở cuối slide */
+  width: 100%;
+  line-height: 25px;
+  /* Tăng khoảng cách giữa các dòng */
+  text-align: justify;
+  background-color: rgba(243, 240, 241, 0.9);
+  /* Thêm độ trong suốt cho nền */
+  box-sizing: border-box;
+  /* Đảm bảo padding được tính vào kích thước tổng thể */
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  bottom: 50%;
+  /* Điều chỉnh vị trí nút */
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slideshow container */
+/* Slideshow container */
+/* Slideshow container */
+.slideshow-container-2 {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides2 {
+  display: none;
+  /* Ẩn tất cả các slide khi không được hiển thị */
+}
+
+/* Ảnh trong các slide */
+.mySlides2 img {
+  width: 100%;
+  /* Đảm bảo hình ảnh lấp đầy chiều rộng của slide */
+  height: auto;
+  /* Chiều cao tự động để giữ tỷ lệ khung hình */
+  object-fit: cover;
+  /* Đảm bảo hình ảnh không bị biến dạng */
+}
+
+/* Next & previous buttons */
+.prev2,
+.next2 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  /* Điều chỉnh vị trí nút */
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 1000;
+  /* Đảm bảo nút nằm trên cùng */
+}
+
+/* Position the "next button" to the right */
+.next2 {
+  right: 10px;
+  /* Đặt khoảng cách từ bên phải */
+}
+
+/* Position the "prev button" to the left */
+.prev2 {
+  left: 10px;
+  /* Đặt khoảng cách từ bên trái */
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev2:hover,
+.next2:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text2 {
+  color: #000000;
+  font-size: 1.3rem;
+  padding: 16px;
+  /* Tăng padding để tránh che mất chữ */
+  position: absolute;
+  bottom: 3px;
+  /* Đặt nội dung ở cuối slide */
+  width: 99%;
+  line-height: 25px;
+  /* Tăng khoảng cách giữa các dòng */
+  text-align: justify;
+  background-color: rgba(243, 240, 241, 0.9);
+  /* Thêm độ trong suốt cho nền */
+  box-sizing: border-box;
+  /* Đảm bảo padding được tính vào kích thước tổng thể */
+}
+
+
+/* Fading animation */
+.fade2 {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade2 {
+  from {
+    opacity: .4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*tên heading menu*/
+.section-heading-container {
+  font-size: 3.2rem;
+  text-align: center;
+  color: rgb(142, 37, 37);
+  margin: 10px 0;
+
+}
+
+.information-content {
+  margin-left: -8px;
+  margin-top: 8px;
+}

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSITE DU LỊCH</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/thithuc.css">
+    <link rel="stylesheet" href="CSS/main.css">
+
+    <link rel="stylesheet" href="CSS/tintuc.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="app">
+        <header class="header-nav">
+            <div class="grid">
+                <div class="header__menu_head">
+                    <div class="large secondary menu header-bar">
+                        <!-- bên trái menu-->
+                        <div class="left logo-brand ">
+                            <div class="logo ">
+                                Travel
+                            </div>
+
+                        </div>
+                        <!--search-->
+                        <div class="header_search search-box ">
+                            <input type="text" id="searchInput" placeholder="Tìm kiếm">
+                            <button class="header_search-btn" id="searchButton">
+                                <i class="header_search-btn-icon fas fa-search"></i>
+                            </button>
+                        </div>
+                        <!--AVT khi login rồi-->
+                        <!-- <div class="header_user">
+                            <img src="hinh/10.png" alt="" class="header_user__avt">
+                            <span class="header_user_name">Anh Anh</span>
+                           
+                            <ul class="header_user-menu">
+                                <li class="header_user-item">
+                                    <a href="">Trang cá nhân</a>
+                                </li>
+                                <li class="header_user-item">
+                                    <a href="">Đăng xuất</a>
+                                </li>
+
+                            </ul>
+                        </div> -->
+                        <!--bên phải menu-->
+                        <div class="right menu desktop user-infomation">
+                            <div class="item item_sign-up ">
+                                <a href="#">Đăng ký</a>
+                            </div>
+                            <div class="item">
+                                <button class="ui primary button" id="button-login">
+                                    Đăng nhập
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+        </header>
+        <!--Menu 2-->
+        <header class="header-nav--two" id="menu">
+            <div class="grid">
+                <nav class="header-navbar">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item">
+                            <a href="index.html" class="nav_item_link">
+                                Trang chủ
+                            </a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="#" class="nav_item_link">Kế hoạch chuyến đi
+
+                            </a>
+
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="thongtincanbiet.html" class="nav_item_link">Thông tin cần biết
+
+                            </a>
+                            <!-- menu con sổ xuống cấp 1 -->
+                            <ul>
+                                <li class="submenu"><a href="thithuc.html">Thị thực</a></li>
+                                <li class="submenu"><a href="dichuyen.html">Di chuyển</a> </li>
+                                <li class="submenu"><a href="antoan.html">An toàn</a> </li>
+                                <li class="submenu"><a href="tramthongtin.html">Trạm thông tin</a> </li>
+                            </ul>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="#" class="nav_item_link">Lễ hội & sự kiện
+
+                            </a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="tintuc.html" class="nav_item_link">Tin tức</a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="" class="nav_item_link">Liên Hệ</a>
+                        </li>
+                    </ul>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            document.getElementById('searchButton').addEventListener('click', function () {
+                                var searchTerm = document.getElementById('searchInput').value.trim();
+                                if (searchTerm) {
+                                    window.location.href = "search_results_page.jsp?query=" + encodeURIComponent(searchTerm);
+                                } else {
+                                    alert("Vui lòng nhập từ khóa tìm kiếm!"); // Thông báo nếu ô tìm kiếm trống
+                                }
+                            });
+                        });
+                    </script>
+                    <script>
+                        window.onscroll = function () { myFunction() };
+                        var header = document.getElementById("menu");
+                        var sticky = header.offsetTop;
+                        function myFunction() {
+                            if (window.pageYOffset > sticky) {
+                                header.classList.add("sticky"); // Thêm lớp sticky nếu cuộn qua vị trí
+                            } else {
+                                header.classList.remove("sticky"); // Bỏ lớp sticky nếu không còn cuộn qua
+                            }
+                        }
+
+                    </script>
+                </nav>
+            </div>
+
+        </header>
+        <header class="image-head">
+            <div class="header-nav-img">
+                <img src="hinh/index-chinh.png">
+            </div>
+        </header>
+
+
+
+    </div>
+    <!-- <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body"> -->
+    <!--form res-->
+    <!-- <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng ký</h3>
+                        <span class="auth-form__switch-btn">
+                            Đăng nhập
+                        </span>
+                    </div>
+
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Tên</label>
+                            <input type="text" class="auth-form__input" placeholder="Nhập tên của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Email</label>
+                            <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Mật khẩu</label>
+                            <input type="password" class="auth-form__input" placeholder="Mật khẩu tối thiểu 8 ký tự">
+                        </div>
+                    </div>
+
+
+                    <div class="auth-form__controls">
+                        <button class="btn btn--normal auth-form__controls-back ">
+                            TRỞ LẠI
+                        </button>
+                        <button class="btn btn--primary ">
+                            ĐĂNG KÝ
+                        </button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-facebook"></i>
+                        <span class="auth-form__socials--label">
+                            Kết nối với Facebook
+                        </span>
+                    </a>
+                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-google"></i>
+
+                        <span class="auth-form__socials--label"> Kết nối với Google
+                        </span>
+                    </a>
+                </div>
+
+            </div> -->
+
+    <!--form login-->
+    <!-- <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng nhập</h3>
+                        <span class="auth-form__switch-btn">
+                            Đăng ký
+                        </span>
+                    </div>
+
+                    <div class="auth-form__form">
+
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Email</label>
+                            <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <label for="" class="auth-form__lab">Mật khẩu</label>
+                            <input type="password" class="auth-form__input" placeholder="Mật khẩu tối thiểu 8 ký tự">
+                        </div>
+                    </div>
+                    <div class="auth-form__aside">
+                        <div class="auth-form__help">
+                            <a href="" class="auth-form_help-link">Quên mật khẩu</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn btn--normal auth-form__controls-back ">
+                            TRỞ LẠI
+                        </button>
+                        <button class="btn btn--primary ">
+                            ĐĂNG NHẬP
+                        </button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-facebook"></i>
+                        <span class="auth-form__socials--label">
+                           Đăng nhập với Facebook
+                        </span>
+                    </a>
+                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-google"></i>
+
+                        <span class="auth-form__socials--label"> Đăng nhập với Google
+                        </span>
+                    </a>
+                </div>
+
+            </div> -->
+
+    </header>
+    <div class="app_container">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid_column-1-5"></div>
+                <div class="grid_column-9">
+
+                    <div class="container_content">
+                        <h2 class="section-heading">Tin tức Du lịch Thành phố Hồ Chí Minh</h2>
+                    </div>
+
+                    <!--slide-->
+                    <div class="container-all--slide" id="slide1">
+
+                        <div class="container_content">
+                            <h2 class="section-heading-slide">Một số tin tức lễ hội ở Thành phố Hồ Chí Minh</h2>
+                        </div>
+                        <div class="container_news-list">
+                            <div class="grid__row">
+                                <div class="grid_column-12">
+                                    <div class="slideshow-container">
+                                        <a href="">
+                                            <div class="mySlides fade">
+                                                <img src="hinh/songnuoc.png" style="width:100%">
+                                                <div class="text">
+                                                    <em>31/05/2024</em>
+                                                    <h2>Lễ hội sông nước TP.HCM lần thứ 2 năm 2024: Kéo người dân đến
+                                                        sông
+                                                        Sài Gòn</h2>
+                                                    TP.HCM đang hướng đến một lễ hội sông nước thường niên, cố định, trở
+                                                    thành điểm hẹn cho du khách khắp nơi đổ về sống cùng không khí đặc
+                                                    trưng
+                                                    của văn hóa sông nước.
+                                                </div>
+                                            </div>
+                                            <div class="mySlides fade">
+                                                <img src="hinh/aodai.png" style="width:100%">
+                                                <div class="text">
+                                                    <em>01/02/2023</em>
+                                                    <h2>LỄ HỘI ÁO DÀI THÀNH PHỐ HỒ CHÍ MINH LẦN 9 NĂM 2023 "TÔI YÊU ÁO
+                                                        DÀI
+                                                        VIỆT NAM"</h2>
+
+                                                    Lễ hội Áo dài Thành phố Hồ Chí Minh lần thứ 9 năm 2023 tiếp tục là
+                                                    sự
+                                                    kiện thường niên nổi bật của thành phố được tổ chức định kỳ vào
+                                                    tháng 3
+                                                    hàng năm, góp phần bảo tồn, phát huy các giá trị văn hoá truyền
+                                                    thống
+                                                    độc đáo của dân tộc, nuôi dưỡng tình yêu của người dân thành phố với
+                                                    Áo
+                                                    dài Việt Nam, đồng thời góp phần quảng bá về điểm đến Thành phố Hồ
+                                                    Chí
+                                                    Minh, vừa thu hút vừa tăng tính trải nghiệm cho du khách khi đến
+                                                    thành
+                                                    phố.
+                                                </div>
+                                            </div>
+                                            <div class="mySlides fade">
+                                                <img src="hinh/ngayhoidulich.png" style="width:100%">
+                                                <div class="text">
+                                                    <em>05/04/2024</em>
+                                                    <h2>Ngày hội Du lịch TP.HCM lần thứ 20 chính thức khai mạc</h2>
+                                                    Ngày hội du lịch sẽ kết nối các điểm
+                                                    đến hấp dẫn trong và ngoài nước.
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                                        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-all--slide" id="slide2">
+                        <div class="container_content">
+                            <h2 class="section-heading-slide">Một số tin tức du lịch</h2>
+                        </div>
+                        <div class="container_news-list">
+                            <div class="grid__row">
+                                <div class="grid_column-12">
+                                    <div class="slideshow-container-2">
+                                        <a href="">
+                                            <div class="mySlides2 fade2">
+                                                <img src="hinh/quocte.jpg" style="width:99%">
+                                                <div class="text2">
+                                                    <em>26/09/2024</em>
+                                                    <h2>
+                                                        TP.HCM đẩy mạnh liên kết du lịch, hướng tới mục tiêu 6 triệu
+                                                        khách
+                                                        quốc tế
+                                                    </h2>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="mySlides2 fade2">
+                                                <img src="hinh/hoicho.png" style="width:99%">
+                                                <div class="text2">
+                                                    <em>13/09/2024</em>
+                                                    <h2>
+                                                        HỘI CHỢ TRIỂN LÃM QUỐC TẾ QUÀ TẶNG, QUÀ LƯU NIỆM THÀNH PHỐ HỒ
+                                                        CHÍ
+                                                        MINH NĂM 2024
+                                                    </h2>
+
+                                                </div>
+                                            </div>
+                                            <div class="mySlides2 fade2">
+                                                <img src="hinh/hoithao.png" style="width:99%">
+                                                <div class="text2">
+                                                    <em>14/09/2024</em>
+                                                    <h2>
+                                                        HỘI THẢO “SỨC MẠNH TRUYỀN THÔNG TRONG XÂY DỰNG VÀ THÚC ĐẨY PHÁT
+                                                        TRIỂN BỀN VỮNG”
+
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <div class="mySlides2 fade2">
+                                                <img src="hinh/thanhtich.png" style="width:99%">
+                                                <div class="text2">
+                                                    <em>14/09/2024</em>
+                                                    <h2>THÀNH PHỐ HỒ CHÍ MINH CHIẾN THẮNG 3 HẠNG MỤC QUAN TRỌNG TẠI LỄ
+                                                        TRAO
+                                                        GIẢI THƯỞNG DU LỊCH MICE THẾ GIỚI
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <div class="mySlides2 fade2">
+                                                <img src="hinh/hoicho.png" style="width:99%">
+                                                <div class="text2">
+                                                    <em>13/09/2024</em>
+                                                    <h2>
+                                                        HỘI CHỢ TRIỂN LÃM QUỐC TẾ QUÀ TẶNG, QUÀ LƯU NIỆM THÀNH PHỐ HỒ
+                                                        CHÍ
+                                                        MINH NĂM 2024
+                                                    </h2>
+
+                                                </div>
+                                            </div>
+                                            <div class="mySlides2 fade2">
+                                                <img src="hinh/trainghiem.png" style="width:99%">
+                                                <div class="text2">
+                                                    <em>09/12/2021</em>
+                                                    <h2>Trải nghiệm Sài Gòn ban đêm trên buýt đường sông</h2>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="prev2" onclick="plusSlides(-1, 2)">&#10094;</a>
+                                        <a class="next2" onclick="plusSlides(1, 2)">&#10095;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        let slideIndex1 = 1;
+                        let slideIndex2 = 1;
+                        showSlides(slideIndex1, 1);
+                        showSlides(slideIndex2, 2);
+
+                        function plusSlides(n, slideNumber) {
+                            if (slideNumber === 1) {
+                                showSlides(slideIndex1 += n, 1);
+                            } else {
+                                showSlides(slideIndex2 += n, 2);
+                            }
+                        }
+
+                        function showSlides(n, slideNumber) {
+                            let i;
+                            let slides;
+                            if (slideNumber === 1) {
+                                slides = document.getElementsByClassName("mySlides");
+                                if (n > slides.length) { slideIndex1 = 1; }
+                                if (n < 1) { slideIndex1 = slides.length; }
+                                for (i = 0; i < slides.length; i++) {
+                                    slides[i].style.display = "none";
+                                }
+                                slides[slideIndex1 - 1].style.display = "block";
+                            } else {
+                                slides = document.getElementsByClassName("mySlides2");
+                                if (n > slides.length) { slideIndex2 = 1; }
+                                if (n < 1) { slideIndex2 = slides.length; }
+                                for (i = 0; i < slides.length; i++) {
+                                    slides[i].style.display = "none";
+                                }
+                                slides[slideIndex2 - 1].style.display = "block";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-1">
+        <div class="grid">
+            <div class="grid__row">
+
+                <div class="grid_column-2-5">
+                    <div class="footer-security">
+                        <img src="hinh/Travel.png" class="logo-travel">
+                        <div class="footer_secutiry--travel">
+                            <span class="footer_secutiry--travel-text">
+                                Travel - Trang website du lịch <br>
+                                © Bản quyền thuộc về Travel.
+
+                            </span>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_column-1"></div>
+                <div class="grid_column-5-1">
+                    <div class="footer-button">
+                        <div class="footer-text">
+                            <h4 class="footer-h4-signup"> ĐĂNG KÝ NHẬN TIN </h2>
+                                <span class="footer-heading">
+                                    Nhận những câu chuyện du lịch mới đến hộp thư của bạn.
+                                </span>
+                        </div>
+
+                        <div class="footer-button-signup">
+                            <input type="text" placeholder="Nhập địa chỉ email của bạn">
+                            <button class="signup-butt">Đăng ký</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid_column-1"></div>
+                <div class="grid_column-2-5">
+                    <div class="icon-iconfooter">
+                        <h4 class="footer-h4">Liên hệ với chúng tôi</h4>
+                        <div class="social-icons">
+
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer--list">
+                <div class="grid__row">
+                    <div class="grid_column-1-5"></div>
+                    <div class="grid_column-2">
+                        <div class="footer-item--2">
+
+                            <div class="footer-item-link">
+                                <a href="#" class="footer-item-link--list">
+                                    <h4>Điều khoản & điều kiện</h4>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="grid_column-2">
+                        <div class="footer-item--2">
+
+                            <div class="footer-item-link">
+
+                                <h4>Email: contact_travel@gmail.com</h4>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="grid_column-2">
+                        <div class="footer-item--2">
+
+                            <div class="footer-item-link">
+
+                                <a href="#" class="footer-item-link--list">
+                                    <h4>Chính sách bảo mật</h4>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="grid_column-1-5"></div>
+                </div>
+            </div>
+    </footer>
+
+
+    </div>
+
+</body>
+
+</html>
